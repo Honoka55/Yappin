@@ -331,11 +331,11 @@ class SpecialImportComments extends FormSpecialPage {
 				'label-message' => 'yappin-import-file-label',
 				'accept' => [ 'application/json' ],
 			],
-			'skipexisting' => [
-				'type' => 'check',
-				'label-message' => 'yappin-import-skip-existing',
-				'default' => true,
-				'help-message' => 'yappin-import-skip-existing-help',
+			'prefix' => [
+				'type' => 'text',
+				'label-message' => 'yappin-import-prefix',
+				'default' => 'imported',
+				'help-message' => 'yappin-import-prefix-help',
 			],
 			'attachusers' => [
 				'type' => 'check',
@@ -343,11 +343,11 @@ class SpecialImportComments extends FormSpecialPage {
 				'default' => false,
 				'help-message' => 'yappin-import-attach-users-help',
 			],
-			'prefix' => [
-				'type' => 'text',
-				'label-message' => 'yappin-import-prefix',
-				'default' => 'imported',
-				'help-message' => 'yappin-import-prefix-help',
+			'skipexisting' => [
+				'type' => 'check',
+				'label-message' => 'yappin-import-skip-existing',
+				'default' => true,
+				'help-message' => 'yappin-import-skip-existing-help',
 			],
 		];
 	}
