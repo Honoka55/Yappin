@@ -337,7 +337,13 @@ class ImportCommentStreams extends Maintenance {
 			return $wikitext;
 		}
 		$strip = "{{DISPLAYTITLE:\n$commentTitle\n}}";
-		return str_replace( $strip, '', $wikitext );
+		$wikitext = str_replace( $strip, '', $wikitext );
+
+		if ( trim( $commentTitle ) !== trim( $wikitext ) ) {
+			$wikitext = "'''" . wfEscapeWikiText( $commentTitle ) . "'''\n\n$wikitext";
+		}
+
+		return $wikitext;
 	}
 }
 
