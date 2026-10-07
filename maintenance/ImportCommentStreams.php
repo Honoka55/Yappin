@@ -340,7 +340,7 @@ class ImportCommentStreams extends Maintenance {
 		$wikitext = str_replace( $strip, '', $wikitext );
 
 		if ( trim( $commentTitle ) !== trim( $wikitext ) ) {
-			$wikitext = "'''$commentTitle'''\n\n$wikitext";
+			$wikitext = "'''" . wfEscapeWikiText( $commentTitle ) . "'''\n\n$wikitext";
 		}
 
 		return $wikitext;
